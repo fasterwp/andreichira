@@ -1089,7 +1089,6 @@ figcaption,
 }
 
 .site-header .menu-toggle::before {
-	float: left;
 	margin-right: 5px;
 	position: relative;
 	text-rendering: auto;
