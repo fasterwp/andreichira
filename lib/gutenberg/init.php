@@ -14,7 +14,7 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_gutenberg_frontend_sty
  *
  * @since 2.7.0
  */
-/*function genesis_sample_enqueue_gutenberg_frontend_styles() {
+function genesis_sample_enqueue_gutenberg_frontend_styles() {
 
 	wp_enqueue_style(
 		genesis_get_theme_handle() . '-gutenberg',
@@ -23,7 +23,7 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_gutenberg_frontend_sty
 		genesis_get_theme_version()
 	);
 
-}*/
+}
 
 add_action( 'enqueue_block_editor_assets', 'genesis_sample_block_editor_styles' );
 /**
@@ -87,7 +87,7 @@ function genesis_sample_blocks_body_classes( $classes ) {
 add_theme_support( 'editor-styles' );
 
 // Enqueue editor styles.
-//add_editor_style( '/lib/gutenberg/style-editor.css' );
+add_editor_style( '/lib/gutenberg/style-editor.css' );
 
 // Adds support for block alignments.
 add_theme_support( 'align-wide' );
