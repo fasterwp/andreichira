@@ -157,7 +157,7 @@ html {
 body {
 	background-color: #fff;
 	color: #111;
-	font-family: 'Inter','Helvetica Neue', Arial, sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,Roboto,sans-serif;
 	font-size: 18px;
 	line-height: 1.625;
 	font-weight: 400;
@@ -250,7 +250,6 @@ h6 {
 
 h1 {
 	font-size: 30px;
-	letter-spacing: -1px;
 }
 
 h2 {
@@ -934,7 +933,6 @@ figcaption,
 .site-title {
 	font-size: 20px;
 	font-weight: 700;
-	letter-spacing: -0.5px;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -1411,6 +1409,38 @@ p.entry-meta {
 
 @media only screen and (min-width: 960px) {
 
+	.menu-item.menu-item-has-children > a > span {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	
+	.menu-item.menu-item-has-children > a > span::after {
+		/* display: inline-block; */
+		width: 6px;
+		height: 6px;
+		margin-left: 8px;
+		border-top: 1px solid;
+		border-right: 1px solid;
+		content: "";
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	
+	.sub-menu .menu-item.menu-item-has-children > a > span {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+	
+	.sub-menu .menu-item.menu-item-has-children > a > span::after {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
 	/* Site Header
 	--------------------------------------------- */
 
@@ -1789,3 +1819,88 @@ p.entry-meta {
 	}
 
 }
+.search-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.menu-item .search-form {
+	margin-top: 20px;
+	max-width: 300px;
+}
+
+@media only screen and (min-width: 960px) {
+
+	.menu-item .search-form {
+		margin-left: 20px;
+		margin-top: 0;
+	}
+
+}
+
+.search-form-input {
+	padding: 7px;
+	font-size: 14px;
+}
+
+.search-form-submit {
+	border-radius: 0;
+	background-color: #ddd;
+	padding: 0 10px;
+}
+
+.search-icon {
+	height: 12px;
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+
+.search-form-submit:hover .search-icon path {
+	fill: white;
+}
+
+.home-featured {
+	padding: 80px 0;
+	background-color:#002A38;
+}
+
+.home-featured .wrap {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 40px 30% 40px 40px;
+	color: #fff;
+}
+
+.home-featured .widget:last-child {
+	margin-bottom: 0;
+}
+
+.home-featured h2 {
+	font-size: 42px;
+	color: #fff;
+}
+
+.cta-button {
+background-color: #00060A;
+border: 0;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+padding: 15px 30px;
+text-align: center;
+text-decoration: none;
+white-space: normal;
+width: auto;
+}
+.cta-button:focus,
+.cta-button:hover {
+	background-color: #0073e5;
+	border-width: 0;
+	color: #fff;
+	text-decoration: none;
+}
+#shipping-pickup-store-select{
+	padding: 5px !important;
+	}
