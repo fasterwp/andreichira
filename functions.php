@@ -272,12 +272,12 @@ remove_theme_support( 'wc-product-gallery-slider' );
 genesis_register_widget_area(
 	array(
 		'id'          => 'home-featured',
-		'name'        => __( 'Home Featured', 'my-theme-text-domain' ),
-		'description' => __( 'This is the home featured section.', 'my-theme-text-domain' ),
+		'name'        => __( 'Home Featured', 'genesis-sample' ),
+		'description' => __( 'This is the home featured section.', 'genesis-sample' ),
 	)
 );
 
-add_action( 'genesis_after_header', 'custom_home_featured' );
+add_action( 'genesis_before_loop', 'custom_home_featured' );
 /**
  * Display `home-featured` widget area below the header.
  */
