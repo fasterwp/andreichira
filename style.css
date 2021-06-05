@@ -178,7 +178,7 @@ textarea:focus,
 
 a {
 	color: #03a87c;
-	text-decoration: underline;
+	text-decoration: none;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
