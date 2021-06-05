@@ -1006,7 +1006,7 @@ figcaption,
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: #fff;
+	background-color: #000;
 	font-size: 14px;
 	position: relative;
 	word-wrap: break-word;
@@ -1049,7 +1049,7 @@ figcaption,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #111;
+	color: #fff;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1063,7 +1063,7 @@ figcaption,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #03a87c;
+	color: #fff;
 }
 
 .menu-toggle {
