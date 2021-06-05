@@ -1,11 +1,11 @@
 /*
 Theme Name: andreichira
-Theme URI: https://demo.studiopress.com/
+Theme URI: https://andreichira.ro/
 Description: This is the sample theme created for the Genesis Framework.
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 3.3.4
+Version: 3.4.1
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -156,11 +156,11 @@ html {
 
 body {
 	background-color: #fff;
-	color: #111;
-	font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.625;
+	color: #333;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-size: 18px;
 	font-weight: 400;
+	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -178,14 +178,14 @@ textarea:focus,
 
 a {
 	color: #0073e5;
-	text-decoration: none;
+	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #000;
-	text-decoration: underline;
+	color: #333;
+	text-decoration: none;
 }
 
 p {
@@ -226,7 +226,7 @@ i {
 
 mark {
 	background: #ddd;
-	color: #000;
+	color: #333;
 }
 
 blockquote {
@@ -242,7 +242,6 @@ h3,
 h4,
 h5,
 h6 {
-	color: #000;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -250,7 +249,6 @@ h6 {
 
 h1 {
 	font-size: 30px;
-	letter-spacing: -1px;
 }
 
 h2 {
@@ -263,6 +261,11 @@ h3 {
 
 h4 {
 	font-size: 20px;
+}
+
+.entry-content h3,
+.entry-content h4 {
+	font-weight: 600;
 }
 
 .entry-content h4 {
@@ -378,7 +381,7 @@ select,
 textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
-	color: #000;
+	color: #333;
 	font-size: 18px;
 	font-weight: 400;
 	padding: 15px;
@@ -397,18 +400,13 @@ input[type="radio"] {
 	width: auto;
 }
 
-::-ms-input-placeholder {
-	color: #000;
-	opacity: 1;
-}
-
 :-ms-input-placeholder {
-	color: #000;
+	color: #333;
 	opacity: 1;
 }
 
 ::placeholder {
-	color: #000;
+	color: #333;
 	opacity: 1;
 }
 
@@ -419,7 +417,7 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #000;
+	background-color: #333;
 	border: 0;
 	border-radius: 5px;
 	color: #fff;
@@ -513,6 +511,7 @@ tr {
 }
 
 th {
+	font-weight: 600;
 	padding: 0.5em;
 }
 
@@ -537,7 +536,7 @@ th {
 	background: #fff;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #000;
+	color: #333;
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -680,17 +679,18 @@ th {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
+	font-weight: 600;
 	margin-bottom: 10px;
 }
 
 .entry-title {
-	font-size: 32px;
+	font-size: 30px;
 	margin-bottom: 10px;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #000;
+	color: #333;
 	text-decoration: none;
 }
 
@@ -701,6 +701,7 @@ th {
 
 .widget-title {
 	font-size: 18px;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
@@ -764,6 +765,7 @@ figcaption,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
+	font-weight: 600;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
 	padding-left: 10px;
@@ -877,6 +879,83 @@ figcaption,
 	margin-top: 20px;
 }
 
+/* Genesis Simple FAQ
+--------------------------------------------- */
+
+.gs-faq__question {
+	background: transparent;
+	border-bottom: 1px solid #eee;
+	color: #333;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.gs-faq__question:focus,
+.gs-faq__question:hover {
+	background: transparent;
+	color: #0073e5;
+}
+
+.gs-faq__question::after {
+	content: "\f132";
+	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	float: right;
+}
+
+.gs-faq__question.gs-faq--expanded::after {
+	content: "\f460";
+}
+
+/* WP Forms
+--------------------------------------------- */
+
+.entry-content .wpforms-container {
+	margin-bottom: 40px;
+}
+
+.entry-content .wpforms-form .wpforms-field {
+	clear: both;
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+.site-container .wpforms-container .wpforms-form .wpforms-field input {
+	border-radius: 0;
+	height: auto;
+	padding: 15px;
+}
+
+.site-container .entry-content .wpforms-form .wpforms-field-label {
+	font-weight: 600;
+}
+
+.site-container .entry-content .wpforms-form .wpforms-field-sublabel {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.entry-content .wpforms-form .wpforms-field-hp {
+	display: none !important;
+	left: -9000px !important;
+	position: absolute !important;
+}
+
+.site-container .entry-content .wpforms-form textarea {
+	padding: 15px;
+}
+
+.site-container .entry-content .wpforms-form textarea.wpforms-field-small {
+	height: 120px;
+}
+
+.site-container .entry-content .wpforms-form textarea.wpforms-field-medium {
+	height: 200px;
+}
+
+.site-container .entry-content .wpforms-form textarea.wpforms-field-large {
+	height: 300px;
+}
+
 
 /* Skip Links
 ---------------------------------------------------------------------------- */
@@ -898,7 +977,7 @@ figcaption,
 
 /* Display outline on focus */
 :focus {
-	color: #000;
+	color: #333;
 	outline: #ccc solid 1px;
 }
 
@@ -928,13 +1007,17 @@ figcaption,
 	width: 100%;
 }
 
+.wp-custom-logo .custom-logo-link {
+	display: block;
+}
+
 .wp-custom-logo .title-area img {
 	width: auto;
 }
 
 .site-title {
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -942,7 +1025,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #000;
+	color: #333;
 	text-decoration: none;
 }
 
@@ -974,7 +1057,7 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #000;
+	color: #333;
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -1040,7 +1123,7 @@ figcaption,
 	opacity: 1;
 }
 
-.genesis-responsive-menu {
+.js .nav-primary {
 	display: none;
 	position: relative;
 }
@@ -1053,7 +1136,7 @@ figcaption,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #000;
+	color: #333;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1089,6 +1172,7 @@ figcaption,
 }
 
 .site-header .menu-toggle::before {
+	float: left;
 	margin-right: 5px;
 	position: relative;
 	text-rendering: auto;
@@ -1193,14 +1277,13 @@ figcaption,
 	background-color: #f5f5f5;
 	padding: 30px;
 }
+
 /* Entry Meta
 --------------------------------------------- */
 
 p.entry-meta {
-	font-size: 12px;
+	font-size: 16px;
 	margin-bottom: 0;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
 }
 
 .entry-header .entry-meta {
@@ -1240,10 +1323,11 @@ p.entry-meta {
 
 .archive-pagination li a {
 	background-color: #f5f5f5;
-	color: #000;
+	color: #333;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
+	font-weight: 600;
 	margin-bottom: 4px;
 	padding: 8px 12px;
 	text-decoration: none;
@@ -1252,7 +1336,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #000;
+	background-color: #333;
 	color: #fff;
 }
 
@@ -1309,34 +1393,6 @@ p.entry-meta {
 	padding-left: 10px;
 }
 
-.comment-time a {
-    color: #777;
-    text-decoration: none;
-	font-size: 15px;
-
-}
-.comment-reply-link {
-    border: 1px solid #000;
-    color: #000;
-    border-radius: 5px;
-    padding: 6px 18px;
-	font-size: 14px;
-	font-weight: 600;
-	text-decoration: none;
-}
-.comment-reply-link:focus,
-.comment-reply-link:hover {
-	color: #0073e5;
-	border: 1px solid #0073e5;
-	text-decoration: none;
-}
-.comment-author-name {
-	text-transform: uppercase;
-	font-weight: 600;
-}
-.comment-author .says {
-	display: none
-}
 /* Sidebar
 ---------------------------------------------------------------------------- */
 
@@ -1411,38 +1467,6 @@ p.entry-meta {
 
 @media only screen and (min-width: 960px) {
 
-	.menu-item.menu-item-has-children > a > span {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-	}
-	
-	.menu-item.menu-item-has-children > a > span::after {
-		/* display: inline-block; */
-		width: 6px;
-		height: 6px;
-		margin-left: 8px;
-		border-top: 1px solid;
-		border-right: 1px solid;
-		content: "";
-		-webkit-transform: rotate(135deg);
-		transform: rotate(135deg);
-	}
-	
-	.sub-menu .menu-item.menu-item-has-children > a > span {
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-	}
-	
-	.sub-menu .menu-item.menu-item-has-children > a > span::after {
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-	}
-
 	/* Site Header
 	--------------------------------------------- */
 
@@ -1474,9 +1498,10 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #000;
+		background-color: #333;
 		border-radius: 3px;
 		color: #fff;
+		font-weight: 600;
 		margin-left: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -1514,7 +1539,7 @@ p.entry-meta {
 	/* Responsive Menu
 	--------------------------------------------- */
 
-	.genesis-responsive-menu {
+	.js .nav-primary {
 		display: block;
 		padding-top: 15px;
 	}
@@ -1689,7 +1714,7 @@ p.entry-meta {
 	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #000 !important;
+		color: #333 !important;
 		text-shadow: none !important;
 	}
 
@@ -1821,88 +1846,3 @@ p.entry-meta {
 	}
 
 }
-.search-form {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-.menu-item .search-form {
-	margin-top: 20px;
-	max-width: 300px;
-}
-
-@media only screen and (min-width: 960px) {
-
-	.menu-item .search-form {
-		margin-left: 20px;
-		margin-top: 0;
-	}
-
-}
-
-.search-form-input {
-	padding: 7px;
-	font-size: 14px;
-}
-
-.search-form-submit {
-	border-radius: 0;
-	background-color: #ddd;
-	padding: 0 10px;
-}
-
-.search-icon {
-	height: 12px;
-	-webkit-transform: rotate(90deg);
-	        transform: rotate(90deg);
-}
-
-.search-form-submit:hover .search-icon path {
-	fill: white;
-}
-
-.home-featured {
-	padding: 80px 0;
-	background-color:#002A38;
-}
-
-.home-featured .wrap {
-	max-width: 1140px;
-	margin: 0 auto;
-	padding: 40px 30% 40px 40px;
-	color: #fff;
-}
-
-.home-featured .widget:last-child {
-	margin-bottom: 0;
-}
-
-.home-featured h2 {
-	font-size: 42px;
-	color: #fff;
-}
-
-.cta-button {
-background-color: #00060A;
-border: 0;
-border-radius: 5px;
-color: #fff;
-cursor: pointer;
-font-size: 16px;
-padding: 15px 30px;
-text-align: center;
-text-decoration: none;
-white-space: normal;
-width: auto;
-}
-.cta-button:focus,
-.cta-button:hover {
-	background-color: #0073e5;
-	border-width: 0;
-	color: #fff;
-	text-decoration: none;
-}
-#shipping-pickup-store-select{
-	padding: 5px !important;
-	}
