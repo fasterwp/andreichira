@@ -932,12 +932,13 @@ figcaption,
 	font-weight: 600;
 	line-height: 1;
 	margin-bottom: 0;
+	letter-spacing: -0.5px;
 }
 
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #111;
+	color: #fff;
 	text-decoration: none;
 }
 
