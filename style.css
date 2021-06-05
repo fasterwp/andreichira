@@ -156,7 +156,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #333;
+	color: #111;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 18px;
 	font-weight: 400;
@@ -177,14 +177,14 @@ textarea:focus,
 }
 
 a {
-	color: #0073e5;
+	color: #03a87c;
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #03a87c;
 	text-decoration: none;
 }
 
@@ -226,7 +226,7 @@ i {
 
 mark {
 	background: #ddd;
-	color: #333;
+	color: #111;
 }
 
 blockquote {
@@ -245,6 +245,7 @@ h6 {
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
+	letter-spacing: -0.2px;
 }
 
 h1 {
@@ -381,7 +382,7 @@ select,
 textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
-	color: #333;
+	color: #111;
 	font-size: 18px;
 	font-weight: 400;
 	padding: 15px;
@@ -401,12 +402,12 @@ input[type="radio"] {
 }
 
 :-ms-input-placeholder {
-	color: #333;
+	color: #111;
 	opacity: 1;
 }
 
 ::placeholder {
-	color: #333;
+	color: #111;
 	opacity: 1;
 }
 
@@ -417,18 +418,20 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #111;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 4px;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 12px 35px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
 	width: auto;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	transition: all .15s ease;
 }
 
 button:focus,
@@ -445,9 +448,11 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
+	background-color: #03a87c;
 	border-width: 0;
 	color: #fff;
+	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+	transform:translateY(-1px);
 }
 
 .entry-content .button:focus,
@@ -457,6 +462,20 @@ input[type="submit"]:hover,
 
 .button {
 	display: inline-block;
+}
+
+a.button.secondary,
+button.secondary,
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary,
+.comment-reply-link {
+	background: transparent;
+	border: 1px solid #03a87c;
+	color: #03a87c;
+	border-radius: 4px;
+	padding: 6px 18px;
+	font-size: 16px;
 }
 
 .site-container button:disabled,
@@ -536,7 +555,7 @@ th {
 	background: #fff;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #333;
+	color: #111;
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -621,6 +640,7 @@ th {
 }
 
 .after-entry {
+	background: #f0f0f0;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 20px 30px;
 }
@@ -690,19 +710,21 @@ th {
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: #111;
 	text-decoration: none;
 }
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
+	color: #03a87c;
 }
 
 .widget-title {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .genesis-title-hidden .site-inner {
@@ -848,115 +870,6 @@ figcaption,
 /* Plugins
 ---------------------------------------------------------------------------- */
 
-/* Genesis eNews Extended
---------------------------------------------- */
-
-.after-entry .enews {
-	text-align: center;
-	padding: 10px;
-}
-
-.sidebar .enews {
-	background-color: #f5f5f5;
-	padding: 30px;
-}
-
-.enews-widget input {
-	font-size: 16px;
-	margin-bottom: 10px;
-}
-
-.after-entry .enews-widget input {
-	text-align: center;
-}
-
-.enews-widget input[type="submit"] {
-	margin: 0;
-	width: 100%;
-}
-
-.enews form + p {
-	margin-top: 20px;
-}
-
-/* Genesis Simple FAQ
---------------------------------------------- */
-
-.gs-faq__question {
-	background: transparent;
-	border-bottom: 1px solid #eee;
-	color: #333;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.gs-faq__question:focus,
-.gs-faq__question:hover {
-	background: transparent;
-	color: #0073e5;
-}
-
-.gs-faq__question::after {
-	content: "\f132";
-	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
-	float: right;
-}
-
-.gs-faq__question.gs-faq--expanded::after {
-	content: "\f460";
-}
-
-/* WP Forms
---------------------------------------------- */
-
-.entry-content .wpforms-container {
-	margin-bottom: 40px;
-}
-
-.entry-content .wpforms-form .wpforms-field {
-	clear: both;
-	margin: 20px 0;
-	overflow: hidden;
-}
-
-.site-container .wpforms-container .wpforms-form .wpforms-field input {
-	border-radius: 0;
-	height: auto;
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-label {
-	font-weight: 600;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-sublabel {
-	font-size: 14px;
-	font-weight: 300;
-}
-
-.entry-content .wpforms-form .wpforms-field-hp {
-	display: none !important;
-	left: -9000px !important;
-	position: absolute !important;
-}
-
-.site-container .entry-content .wpforms-form textarea {
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-small {
-	height: 120px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-medium {
-	height: 200px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-large {
-	height: 300px;
-}
-
-
 /* Skip Links
 ---------------------------------------------------------------------------- */
 
@@ -977,7 +890,7 @@ figcaption,
 
 /* Display outline on focus */
 :focus {
-	color: #333;
+	color: #111;
 	outline: #ccc solid 1px;
 }
 
@@ -986,8 +899,7 @@ figcaption,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	background-color: #000;
 	padding: 0 30px;
 }
 
@@ -1025,7 +937,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: #111;
 	text-decoration: none;
 }
 
@@ -1057,7 +969,7 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #111;
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -1072,7 +984,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: #03a87c;
 	text-decoration: none;
 }
 
@@ -1136,7 +1048,7 @@ figcaption,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #333;
+	color: #111;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1150,7 +1062,7 @@ figcaption,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #0073e5;
+	color: #03a87c;
 }
 
 .menu-toggle {
@@ -1323,7 +1235,7 @@ p.entry-meta {
 
 .archive-pagination li a {
 	background-color: #f5f5f5;
-	color: #333;
+	color: #111;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1336,7 +1248,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #333;
+	background-color: #111;
 	color: #fff;
 }
 
@@ -1498,7 +1410,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #333;
+		background-color: #111;
 		border-radius: 3px;
 		color: #fff;
 		font-weight: 600;
@@ -1509,7 +1421,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #0073e5;
+		background-color: #03a87c;
 	}
 
 	.genesis-nav-menu .sub-menu,
@@ -1714,7 +1626,7 @@ p.entry-meta {
 	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #333 !important;
+		color: #111 !important;
 		text-shadow: none !important;
 	}
 
