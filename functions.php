@@ -264,6 +264,7 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
 //remove_theme_support( 'wc-product-gallery-zoom' );
 remove_theme_support( 'wc-product-gallery-lightbox' );
 remove_theme_support( 'wc-product-gallery-slider' );
