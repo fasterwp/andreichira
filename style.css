@@ -1438,11 +1438,6 @@ p.entry-meta {
 		z-index: 9999;
 	}
 
-	.site-header .wrap {
-		max-width: 1140px;
-		margin: 0 auto;
-	}
-
 	.admin-bar .site-header {
 		top: 32px;
 	}
