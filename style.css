@@ -1414,6 +1414,10 @@ p.entry-meta {
 	text-decoration: none;
 }
 
+.home-featured {
+	margin-bottom: 40px;
+}
+
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
@@ -1440,6 +1444,11 @@ p.entry-meta {
 
 	.admin-bar .site-header {
 		top: 32px;
+	}
+
+	.widget.widget_search {
+		width: 60px;
+		margin: 0 auto;
 	}
 
 	/* Genesis Menu
