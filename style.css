@@ -177,14 +177,14 @@ textarea:focus,
 }
 
 a {
-	color: #03a87c;
+	color: #06c;
 	text-decoration: none;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 a:focus,
 a:hover {
-	color: #03a87c;
+	color: #06c;
 	text-decoration: none;
 }
 
@@ -242,6 +242,7 @@ h3,
 h4,
 h5,
 h6 {
+	color:#000;
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -446,7 +447,7 @@ input[type="submit"]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #03a87c;
+	background-color: #06c;
 	border-width: 0;
 	color: #fff;
 }
@@ -467,8 +468,8 @@ input[type="reset"].secondary,
 input[type="submit"].secondary,
 .comment-reply-link {
 	background: transparent;
-	border: 1px solid #03a87c;
-	color: #03a87c;
+	border: 1px solid #06c;
+	color: #06c;
 	border-radius: 4px;
 	padding: 6px 18px;
 	font-size: 16px;
@@ -712,7 +713,7 @@ th {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #03a87c;
+	color: #06c;
 }
 
 .widget-title {
@@ -981,7 +982,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #03a87c;
+	color: #06c;
 	text-decoration: none;
 }
 
@@ -1479,7 +1480,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #03a87c;
+		background-color: #06c;
 	}
 
 	.genesis-nav-menu .sub-menu,
