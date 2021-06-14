@@ -1155,17 +1155,6 @@ figcaption,
 	margin-bottom: 40px;
 }
 
-.entry-content a {
-	border-bottom: 1px solid rgba(0, 0, 0, 1);
-	color: rgba(0, 0, 0, 1);
-	text-decoration: none;
-}
-
-.entry-content a:hover {
-	border-bottom: 1px solid rgba(0, 0, 0, .4);
-	color: rgba(0, 0, 0, .4);
-	text-decoration: none;
-}
 
 .entry-content ol,
 .entry-content ul {
