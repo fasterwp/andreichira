@@ -450,11 +450,13 @@ input[type="submit"]:hover,
 	background-color: #007aff;
 	border-width: 0;
 	color: #fff;
+	text-decoration: none;
 }
 
 .entry-content .button:focus,
 .entry-content .button:hover {
 	color: #fff;
+	text-decoration: none;
 }
 
 .button {
@@ -473,6 +475,7 @@ input[type="submit"].secondary,
 	border-radius: 4px;
 	padding: 6px 18px;
 	font-size: 16px;
+	text-decoration: none;
 }
 
 .site-container button:disabled,
