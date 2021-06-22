@@ -184,8 +184,8 @@ a {
 
 a:focus,
 a:hover {
-	color: #007aff;
-	text-decoration: underline;
+	color: #000;
+	text-decoration: none;
 }
 
 p {
